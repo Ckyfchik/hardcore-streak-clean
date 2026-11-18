@@ -9,7 +9,7 @@ const WEEKDAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 
 export default function HistoryScreen() {
   const { habits, activeHabitId } = useHabitStore();
-  const activeHabit = habits.find((h) => h.id === activeHabitId) || habits;
+  const activeHabit = habits.find((h) => h.id === activeHabitId) || habits[0];
   if (!activeHabit) return <LiquidBackground><SafeAreaView style={styles.container}><Text style={styles.emptyText}>Нет данных</Text></SafeAreaView></LiquidBackground>;
 
   const today = startOfDay(new Date());

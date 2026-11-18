@@ -15,7 +15,7 @@ export default function HomeScreen() {
     return () => sub.remove();
   }, []);
 
-  const activeHabit = habits.find((h) => h.id === activeHabitId) || habits;
+  const activeHabit = habits.find((h) => h.id === activeHabitId) || habits[0];
   if (!activeHabit) {
     return (
       <LiquidBackground>

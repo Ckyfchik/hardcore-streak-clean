@@ -69,7 +69,7 @@ export const useHabitStore = create<HabitState>()(
       deleteHabit: (id) => {
         set((s) => {
           const filtered = s.habits.filter((h) => h.id !== id);
-          return { habits: filtered, activeHabitId: s.activeHabitId === id ? (filtered?.id ?? null) : s.activeHabitId };
+          return { habits: filtered, activeHabitId: s.activeHabitId === id ? (filtered[0]?.id ?? null) : s.activeHabitId };
         });
       },
       setActiveHabit: (id) => set({ activeHabitId: id }),
