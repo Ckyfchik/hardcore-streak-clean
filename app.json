@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "Хардкорный стрик",
+    "slug": "hardcore-streak",
+    "scheme": "hardcorestreak",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.hardcore.streak",
+      "adaptiveIcon": { "backgroundColor": "#050814" }
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-notifications", { "color": "#FF9500" }]
+    ]
+  }
+}
